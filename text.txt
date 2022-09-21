@@ -1,0 +1,11 @@
+SSH INTO AWS
+ssh -i "discord-bot-aws-ec2.pem" ubuntu@ec2-13-53-197-135.eu-north-1.compute.amazonaws.com
+
+IF issues:
+chmod 600 discord-bot-aws-ec2.pem
+
+
+copy local files to EC2
+rsync -azvv --progress -e "ssh -i discord-bot-aws-ec2.pem" \
+./code \
+ubuntu@ec2-13-53-197-135.eu-north-1.compute.amazonaws.com:~/
