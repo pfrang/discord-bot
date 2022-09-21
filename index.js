@@ -12,5 +12,15 @@ const client = new Client({
   ]
 })
 
+//when bot starts up
+client.on("ready", () => {
+  console.log(`Halla shtøgge jævler fra ${client.user.tag}`);
+})
+//when someone types
+client.on("message", msg => {
+  if (msg.content === "æsj") {
+    msg.reply("du som er æsj")
+  }
+})
 
 client.login(process.env.DISCORD_TOKEN);
