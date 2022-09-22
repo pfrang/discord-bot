@@ -23,15 +23,28 @@ client.on("ready", () => {
 //   }
 // })
 
+function getRandomMessage() {
+  return ["Neii ikke syk", "eeer ikke jeg fakka mye bedre enn deg da, gear > skill Æ", "Meeh ingen som er glad i sånn", "mye Unød", "uskuffi^5","duel?! 'ok' neiii as nå er det for sent, Æ", "skjanern han er" ]
+}
+
+
+client.on('guildCreate', (g) => {
+  g.systemChannel.send("Æ")
+})
+
 client.on('messageCreate', async (message) => {
-  if(message.content === 'ping') {
-    await message.channel.send("pong")
-  }
-  if(message.content.includes('nei')) {
-    await message.channel.send("nnneiiiii ikke yk i odet")
-  }
-  if(message.content === 'aesj' || message.content === 'æsj') {
-    await message.channel.send("eeer du som er æsj")
+  if (!message.author.bot) {
+    if (message.content.includes('oi')) {
+      await message.channel.send("Oiiiiiiiiiiiiiiii")
+    }
+
+    if (message.content.includes('nei')) {
+      await message.channel.send("nnneiiii ikke syk")
+    }
+    if (message.content === 'aesj' || message.content === 'æsj') {
+      await message.channel.send("eeer du som er æsj")
+    }
+    await message.channel.send(getRandomMessage()[Math.floor((Math.random()*getRandomMessage().length))])
   }
 
 });
