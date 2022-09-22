@@ -24,7 +24,7 @@ client.on("ready", () => {
 // })
 
 client.on('messageCreate', async (message) => {
-  console.log(message);
+  console.log(message.content);
 });
 
 
