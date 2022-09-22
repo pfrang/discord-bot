@@ -34,15 +34,25 @@ client.on('guildCreate', (g) => {
 
 client.on('messageCreate', async (message) => {
   if (!message.author.bot) {
-    if (message.content.includes('oi')) {
+    if (message.content.toLowerCase().includes('oi')) {
       await message.channel.send("Oiiiiiiiiiiiiiiii")
+      return
     }
-
-    if (message.content.includes('nei')) {
+    if(message.content.toLowerCase().includes('herlig')) {
+      await message.channel.send("heeeerlig sa kjerringa")
+      return
+    }
+    if (message.content.toLowerCase().includes('aram')) {
+      await message.channel.send('aram trash?')
+      return
+    }
+    if (message.content.toLowerCase().includes('nei')) {
       await message.channel.send("nnneiiii ikke syk")
+      return
     }
-    if (message.content === 'aesj' || message.content === 'æsj') {
+    if (message.content.toLowerCase() === 'aesj' || message.content.toLowerCase() === 'æsj') {
       await message.channel.send("eeer du som er æsj")
+      return
     }
     await message.channel.send(getRandomMessage()[Math.floor((Math.random()*getRandomMessage().length))])
   }
