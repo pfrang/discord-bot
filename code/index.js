@@ -24,7 +24,16 @@ client.on("ready", () => {
 // })
 
 client.on('messageCreate', async (message) => {
-  console.log(message);
+  if(message.content === 'ping') {
+    await message.channel.send("pong")
+  }
+  if(message.content.includes('nei')) {
+    await message.channel.send("nnneiiiii ikke yk i odet")
+  }
+  if(message.content === 'aesj' || message.content === 'æsj') {
+    await message.channel.send("eeer du som er æsj")
+  }
+
 });
 
 
