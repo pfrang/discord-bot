@@ -54,7 +54,12 @@ client.on('messageCreate', async (message) => {
       await message.channel.send("eeer du som er æsj")
       return
     }
-    await message.channel.send(getRandomMessage()[Math.floor((Math.random() * getRandomMessage().length))])
+    if (message.content.toLowerCase().includes('vaage')) {
+      await message.channel.send("Vaage er jo den smudeste personen i verden")
+      return
+    }
+    return
+    // await message.channel.send(getRandomMessage()[Math.floor((Math.random() * getRandomMessage().length))])
   }
 
 });
