@@ -24,7 +24,13 @@ client.on("ready", () => {
 // })
 
 function getRandomMessage() {
-  return ["Neii ikke syk", "eeer ikke jeg fakka mye bedre enn deg da, gear > skill Æ", "Meeh ingen som er glad i sånn", "mye Unød", "uskuffi^5", "duel?! 'ok' neiii as nå er det for sent, Æ", "skjanern han er"]
+  return ["Neii ikke syk",
+    "eeer ikke jeg fakka mye bedre enn deg da, gear > skill Æ",
+    "Meeh ingen som er glad i sånn",
+    "mye Unød",
+    "uskuffi^5",
+    "duel?! 'ok' neiii as nå er det for sent, Æ",
+    "skjanern han er"]
 }
 
 
